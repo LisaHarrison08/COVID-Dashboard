@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Comparison</title>
+  <title>Pet Adoption</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/superhero/bootstrap.min.css"
@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;669&display=swap" rel="stylesheet">
   <!--CSS Link -->
-  <link rel="stylesheet" href="static/css/comparison.css">
+  <link rel="stylesheet" href="static/css/pets.css">
 </head>
 
 <body>
@@ -49,10 +49,9 @@
     </nav>
   </div>
 
-
   <!-- Content -->
   <div class="hero text-center">
-    <h1>Compare the Data</h1>
+    <h2>Pet Adoption</h2>
   </div>
 
   <!-- Creates the Overall Grid -->
@@ -61,61 +60,46 @@
     <!--First Row Charts -->
     <div class="row">
 
-      <!--First Column in this Row-->
-      <div class="col-lg-6">
-        <div class="box py-4 mt-2 pb-5 px-0">
-          <div id="myDiv"></div>
-          <h4>Select a State:</h4>
-          <div id="stateData" class="panel-body">
-            <select id="selDataset"></select>
-          </div>
+      <!--First Row-->
+      <div class="col-lg-12">
+        <div class="box py-2 mt-3 px-0">
+          <div id="stacked-plot"></div>
+          <h3></h3>
         </div>
       </div>
 
-      <!--Second Column in this Row-->
-      <div class="col-lg-6">
-        <div class="box py-4 mt-2 pb-5 px-0">
-          <div id="myDiv2"></div>
-          <h4>Select a State:</h4>
-          <div id="stateData2" class="panel-body">
-            <select id="selDataset2"></select>
-          </div>
+      <!--Second Row-->
+      <div class="col-lg-12">
+        <div class="box py-2 px-0">
+          <div id="petadoptintake-plot"></div>
         </div>
       </div>
     </div>
 
-    <!--Second Row Charts -->
+    <!-- Third Row Charts -->
     <div class="row">
 
       <!--First Column in this Row-->
-      <div class="col-lg-6">
-        <div class="box py-4 mb-2 pb-5 px-0">
-          <div id="myDiv3"></div>
-          <h4>Select a State:</h4>
-          <div id="stateData" class="panel-body">
-            <select id="selDataset3"></select>
-          </div>
+      <div class="col-lg-6 py-5 mb-5 px-0">
+        <div class="box">
+          <div id="piechart1-plot"></div>
+          <h3></h3>
         </div>
       </div>
 
-      <!--Second Column in this Row-->
+      <!--Second Column in the Row-->
       <div class="col-lg-6">
-        <div class="box py-4 mb-2 pb-5 px-0">
-          <div id="myDiv4"></div>
-          <h4>Select a State:</h4>
-          <div id="stateData" class="panel-body">
-            <select id="selDataset4"></select>
-          </div>
+        <div class="box py-5 mb-5 px-0">
+          <div id="piechart2-plot"></div>
         </div>
       </div>
     </div>
-
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="static/js/comparison.js"></script>
+  <script src="static/js/pets.js"></script>
 </body>
 
 </html>
