@@ -1,7 +1,7 @@
 
    // Google Mobility Plotly Chart Selected By State
 
-Plotly.d3.json('./data/data_us.json', function (err, rows) {
+Plotly.d3.json('./data/Merged_data.json', function (err, rows) {
 
     function unpack(rows, key) {
         return rows.map(function (row) { return row[key]; });
@@ -86,7 +86,7 @@ Plotly.d3.json('./data/data_us.json', function (err, rows) {
         var data = [trace1, trace2, trace3, trace4, trace5, trace6];
 
         var layout = {
-            title: 'Mobility Trends',
+            title:'Mobility Trends',
         };
 
         Plotly.newPlot('myDiv', data, layout);
@@ -95,7 +95,7 @@ Plotly.d3.json('./data/data_us.json', function (err, rows) {
 
 // Google Mobility Plotly Chart 2 Selected By State
 
-Plotly.d3.json('./data/data_us.json', function (err, rows) {
+Plotly.d3.json('./data/Merged_data.json', function (err, rows) {
 
     function unpack(rows, key) {
         return rows.map(function (row) { return row[key]; });
@@ -226,7 +226,7 @@ getData("Alabama"); //default state
 
 function drawPlot(rows){
     var trace1 = {
-        type: "scatter",
+        type: "bar",
         mode: "lines",
         name: 'Cases',
         x: unpack(rows, 'date'),
@@ -235,7 +235,7 @@ function drawPlot(rows){
     }
 
     var trace2 = {
-        type: "scatter",
+        type: "bar",
         mode: "lines",
         name: 'Deaths',
         x: unpack(rows, 'date'),
@@ -246,7 +246,7 @@ function drawPlot(rows){
     var data = [trace1, trace2];
 
     var layout = {
-        title: 'U.S COVID Cases & Deaths',
+        title:'Cases & Deaths',
     };
 
     Plotly.newPlot('myDiv3', data, layout);
@@ -293,7 +293,7 @@ getData("Alabama"); //default state
 
 function drawPlot(rows){
     var trace1 = {
-        type: "scatter",
+        type: "bar",
         mode: "lines",
         name: 'Cases',
         x: unpack(rows, 'date'),
@@ -302,7 +302,7 @@ function drawPlot(rows){
     }
 
     var trace2 = {
-        type: "scatter",
+        type: "bar",
         mode: "lines",
         name: 'Deaths',
         x: unpack(rows, 'date'),
@@ -313,7 +313,7 @@ function drawPlot(rows){
     var data = [trace1, trace2];
 
     var layout = {
-        title: 'U.S COVID Cases & Deaths',
+        title: 'Cases & Deaths',
     };
 
     Plotly.newPlot('myDiv4', data, layout);
